@@ -1,31 +1,40 @@
 {
   "name": "kyogo",
   "productName": "Kyogo",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "Competitive Research",
   "main": "main/index.js",
+  "author": "tgfjt",
   "scripts": {
     "test": "standard",
     "start": "electron .",
-    "dev": "NODE_ENV=development electron . --not-packaged=true --debug=true",
+    "dev": "NODE_ENV=development electron .",
     "bundle": "browserify -e src/app.js -o renderer/bundle.js",
     "watch": "watchify src/app.js -o renderer/bundle.js -dv",
-    "build": "electron-packager . --out=dist --asar --overwrite --all"
+    "build": "npm run bundle && build"
   },
   "dependencies": {
-    "electron": "^1.0.1",
     "electron-debug": "^1.0.0"
   },
   "devDependencies": {
+    "electron": "^1.0.1",
     "browserify": "^13.1.1",
     "choo": "^3.3.0",
     "choo-location-electron": "^2.0.1",
     "choo-persist": "^1.0.3",
     "classnames": "^2.2.5",
     "devtron": "^1.1.0",
-    "electron-packager": "^8.0.0",
+    "electron-builder": "^10.5.0",
     "is-url": "^1.2.2",
     "standard": "^8.6.0",
     "watchify": "^3.7.0"
+  },
+  "build": {
+    "appId": "com.fujitatakashi.kyogo",
+    "asar": true,
+    "mac": {
+      "title": "競合",
+      "icon": "resource/image/icon/icon.icns"
+    }
   }
 }

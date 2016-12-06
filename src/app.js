@@ -21,7 +21,7 @@ app.router((route) => [
   route('/', mainView)
 ])
 
-persist((persist) => {
+persist({ name: 'kyogo' }, (persist) => {
   app.use(persist)
   const tree = app.start()
   document.getElementById('choo-app').appendChild(tree)
