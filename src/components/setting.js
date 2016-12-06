@@ -7,8 +7,8 @@ module.exports = (state, prev, send) => html`
     <div class="title padded-more">Settings</div>
     ${state.setting.inputs.map((input, i) => inputUrl(i, input, send))}
     <div class="form-group">
-      <button class="btn btn-large btn-default" type="button" onclick=${(e) => send('windows:home')}>Cancel</button>
-      <button class="btn btn-large btn-primary" type="button" onclick=${(e) => send('setting:saveUrls')}>Save</button>
+      <button class="btn btn-form btn-primary" type="button" onclick=${(e) => send('setting:addInput')}>Add Url</button>
+      <button class="btn btn-form btn-positive" type="button" onclick=${(e) => send('setting:saveUrls')}>Save</button>
     </div>
   </form>
 `
