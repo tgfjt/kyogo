@@ -4,24 +4,25 @@ module.exports = {
   namespace: 'setting',
   state: {
     inputs: [
-      { url: '', error: '' },
-      { url: '', error: '' },
-      { url: '', error: '' }
+      { url: 'https://github.com/tgfjt/kyogo', error: '' }
     ]
   },
   reducers: {
     updateInputs: (inputs, state) => ({ inputs })
   },
   effects: {
+    addInput: (data, state, send, done) => {
+      send('setting:updateInputs', state.inputs.concat({ url: '', error: ''}), done)
+    },
     saveUrls: (data, state, send, done) => {
       if (state.inputs.some((input) => {
         return !input.url || !isUrl(input.url)
       })) {
         const inputs = state.inputs.map((input) => {
           if (!input.url) {
-            input.error = 'Empty.'
+            input.error = 'Oh it\'s empty...'
           } else if (!isUrl(input.url)) {
-            input.error = 'Invalid'
+            input.error = 'Uh-oh it\'s invalid URL.'
           }
           return input
         })
@@ -37,6 +38,9 @@ module.exports = {
         if (i === data.index) return { url: data.value, error: '' }
         return input
       }), done)
+    },
+    removeUrl: (data, state, send, done) => {
+      send('setting:updateInputs', state.inputs.filter((input, i) => i !== data.index), done)
     }
   }
 }

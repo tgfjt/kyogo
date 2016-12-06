@@ -1,10 +1,17 @@
-# Kyogo
+# Kyogo [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
 
+![競合](./kyogo.png)
 
 ## Dev
 
 ```
 $ npm install
+```
+
+### to bundle JS
+
+```
+$ npm run bundle (or watch)
 ```
 
 ### Run
@@ -18,9 +25,6 @@ $ npm start
 ```
 $ npm run build
 ```
-
-Builds the app for macOS, Linux, and Windows, using [electron-packager](https://github.com/electron-userland/electron-packager).
-
 
 ## License
 

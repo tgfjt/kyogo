@@ -6,12 +6,25 @@
   <title>競合</title>
   <link rel="stylesheet" href="photon/css/photon.min.css">
   <style>
+    body {
+      line-height: 1.618;
+    }
+
     webview {
       display: inline-flex;
-      min-width: 320px;
-      max-width: 640px;
-      width: 33%;
-      height: 700px;
+      width: 50vw;
+      height: 100vh;
+    }
+
+    button {
+      padding: 0 .5rem;
+      border: 0;
+      background: none;
+    }
+
+    button:hover {
+      cursor: pointer;
+      opacity: .8;
     }
 
     label {
@@ -55,9 +68,7 @@
   </style>
 </head>
 <body>
-
   <div id="choo-app"></div>
-  <input type="text" name="" placeholder="a" value="">
   <script>
     require('./bundle.js')
   </script>
