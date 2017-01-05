@@ -8,13 +8,13 @@ module.exports = {
     ]
   },
   reducers: {
-    updateInputs: (inputs, state) => ({ inputs })
+    updateInputs: (state, inputs) => ({ inputs })
   },
   effects: {
-    addInput: (data, state, send, done) => {
+    addInput: (state, data, send, done) => {
       send('setting:updateInputs', state.inputs.concat({ url: '', error: ''}), done)
     },
-    saveUrls: (data, state, send, done) => {
+    saveUrls: (state, data, send, done) => {
       if (state.inputs.some((input) => {
         return !input.url || !isUrl(input.url)
       })) {
@@ -33,13 +33,13 @@ module.exports = {
         send('windows:home', null, done)
       }
     },
-    inputValue: (data, state, send, done) => {
+    inputValue: (state, data, send, done) => {
       send('setting:updateInputs', state.inputs.map((input, i) => {
         if (i === data.index) return { url: data.value, error: '' }
         return input
       }), done)
     },
-    removeUrl: (data, state, send, done) => {
+    removeUrl: (state, data, send, done) => {
       send('setting:updateInputs', state.inputs.filter((input, i) => i !== data.index), done)
     }
   }

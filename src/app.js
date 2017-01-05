@@ -17,8 +17,8 @@ const mainView = (state, prev, send) => html`
   </div>
 `
 
-app.router((route) => [
-  route('/', mainView)
+app.router({ default: '/' }, [
+  ['/', mainView]
 ])
 
 persist({ name: 'kyogo' }, (persist) => {
