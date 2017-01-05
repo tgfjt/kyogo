@@ -10,6 +10,7 @@ module.exports = {
   reducers: {
     home: () => ({ isHome: true, isSetting: false }),
     setting: () => ({ isHome: false, isSetting: true }),
-    updateUrls: urls => ({ urls })
+    updateUrls: (state, urls) => ({ urls }),
+    updateUA: (state, ua) => ({ ua })
   }
 }
