@@ -31,6 +31,12 @@ module.exports = {
         send('setting:saveUrls', null, done)
       }
     },
+    autoReloadEnabled: (state, data, send, done) => {
+      send('windows:updateAutoreloadEnabled', data, done)
+    },
+    autoReloadInterval: (state, data, send, done) => {
+      send('windows:updateAutoreloadInterval', Number(data), done)
+    },
     addInput: (state, data, send, done) => {
       send('setting:updateInputs', state.inputs.concat({ url: '', error: ''}), done)
     },
