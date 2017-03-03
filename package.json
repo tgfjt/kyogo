@@ -33,7 +33,7 @@
   "build": {
     "appId": "com.fujitatakashi.kyogo",
     "asar": true,
-    "mac": {
+    "dmg": {
       "title": "競合",
       "icon": "resource/image/icon/icon.icns"
     }
