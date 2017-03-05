@@ -28,7 +28,7 @@
     "electron-builder": "^14.5.3",
     "is-url": "^1.2.2",
     "standard": "^9.0.0",
-    "watchify": "^3.7.0"
+    "watchify": "^3.9.0"
   },
   "build": {
     "appId": "com.fujitatakashi.kyogo",
