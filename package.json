@@ -14,7 +14,7 @@
     "build": "npm run bundle && build"
   },
   "dependencies": {
-    "dialogs": "^1.1.17",
+    "dialogs": "^1.1.19",
     "electron-debug": "^1.0.0"
   },
   "devDependencies": {
