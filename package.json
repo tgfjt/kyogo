@@ -20,7 +20,7 @@
   "devDependencies": {
     "electron": "^1.0.1",
     "browserify": "^14.1.0",
-    "choo": "^4.0.3",
+    "choo": "^5.1.0",
     "choo-location-electron": "^2.0.1",
     "choo-persist": "^2.0.1",
     "classnames": "^2.2.5",
