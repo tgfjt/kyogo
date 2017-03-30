@@ -22,7 +22,7 @@
     "browserify": "^14.1.0",
     "choo": "^4.0.3",
     "choo-location-electron": "^2.0.1",
-    "choo-persist": "^2.0.1",
+    "choo-persist": "^3.0.2",
     "classnames": "^2.2.5",
     "devtron": "^1.1.0",
     "electron-builder": "^14.5.3",
