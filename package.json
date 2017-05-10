@@ -18,7 +18,7 @@
     "electron-debug": "^1.0.0"
   },
   "devDependencies": {
-    "electron": "^1.0.1",
+    "electron": "^1.6.7",
     "browserify": "^14.1.0",
     "choo": "^4.0.3",
     "choo-location-electron": "^2.0.1",
