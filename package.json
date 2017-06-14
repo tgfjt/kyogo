@@ -14,20 +14,21 @@
     "build": "npm run bundle && build"
   },
   "dependencies": {
-    "dialogs": "^1.1.17",
-    "electron-debug": "^1.0.0"
+    "choo-expose": "^1.0.1",
+    "choo-log": "^6.1.2",
+    "dialogs": "^1.1.19",
+    "electron-debug": "^1.1.0"
   },
   "devDependencies": {
-    "electron": "^1.0.1",
-    "browserify": "^14.1.0",
-    "choo": "^4.0.3",
-    "choo-location-electron": "^2.0.1",
-    "choo-persist": "^2.0.1",
+    "electron": "^1.6.11",
+    "browserify": "^14.4.0",
+    "choo": "^5.6.2",
+    "choo-persist": "^3.0.2",
     "classnames": "^2.2.5",
-    "devtron": "^1.1.0",
-    "electron-builder": "^18.3.0",
+    "devtron": "^1.4.0",
+    "electron-builder": "^18.6.2",
     "is-url": "^1.2.2",
-    "standard": "^9.0.0",
+    "standard": "^10.0.2",
     "watchify": "^3.9.0"
   },
   "build": {
