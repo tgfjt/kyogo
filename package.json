@@ -6,8 +6,11 @@
   "main": "main/index.js",
   "author": "tgfjt",
   "scripts": {
-    "test": "standard",
+    "precommit": "lint-staged",
+    "lint": "standard",
+    "test": "npm run lint && npm run deps",
     "start": "electron .",
+    "deps": "dependency-check . --entry ./src/app.js",
     "dev": "NODE_ENV=development electron .",
     "bundle": "browserify -e src/app.js -o renderer/bundle.js",
     "watch": "watchify src/app.js -o renderer/bundle.js -dv",
@@ -20,14 +23,17 @@
     "electron-debug": "^1.1.0"
   },
   "devDependencies": {
-    "electron": "^1.6.11",
     "browserify": "^14.4.0",
     "choo": "^5.6.2",
     "choo-persist": "^3.0.2",
     "classnames": "^2.2.5",
+    "dependency-check": "^2.9.0",
     "devtron": "^1.4.0",
+    "electron": "^1.6.11",
     "electron-builder": "^18.6.2",
+    "husky": "^0.13.4",
     "is-url": "^1.2.2",
+    "lint-staged": "^3.6.1",
     "standard": "^10.0.2",
     "watchify": "^3.9.0"
   },
@@ -38,5 +44,12 @@
       "title": "競合",
       "icon": "resource/image/icon/icon.icns"
     }
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "npm run lint",
+      "standard --fix",
+      "git add"
+    ]
   }
 }

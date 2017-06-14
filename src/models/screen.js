@@ -4,7 +4,7 @@ module.exports = (state, emitter) => {
     isHome: false,
     isSetting: true,
     urls: []
-  }, state.screen);
+  }, state.screen)
 
   emitter.on('home', () => {
     state.screen.isHome = true

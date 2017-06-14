@@ -11,7 +11,7 @@ const version = require('../package.json').version
 
 const app = choo()
 
-app.use(persist({ name: `kyogo-${version}` }));
+app.use(persist({ name: `kyogo-${version}` }))
 
 if (process.env.NODE_ENV !== 'production') {
   app.use(log())
@@ -19,9 +19,9 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 app.use(require('./models/screen'))
-app.use(require('./models/setting'))
+app.use(require('./models/settings'))
 
-function mainView(state, emit) {
+function mainView (state, emit) {
   return html`
     <div class="window">
       ${header(state, emit)}
@@ -33,4 +33,3 @@ function mainView(state, emit) {
 app.route('/', mainView)
 
 app.mount('#choo-app')
-

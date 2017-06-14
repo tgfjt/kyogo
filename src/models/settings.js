@@ -10,7 +10,7 @@ module.exports = (state, emitter) => {
       'Mozilla/5.0 (iPhone; CPU iPhone OS 10_2 like Mac OS X) AppleWebKit/602.3.12 (KHTML, like Gecko) Version/10.0 Mobile/14C92 Safari/602.1',
       'Mozilla/5.0 (Linux; Android 7.1.1; Nexus 5X Build/NMF26F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.91 Mobile Safari/537.36'
     ]
-  }, state.settings);
+  }, state.settings)
 
   emitter.on('updateInputs', (inputs) => {
     state.settings.inputs = inputs
@@ -18,8 +18,8 @@ module.exports = (state, emitter) => {
   emitter.on('updateUAs', (uas) => {
     state.settings.uas = uas
   })
-  emitter.on('editUA', () => {
-    if (data === 'custom') {
+  emitter.on('editUA', (value) => {
+    if (value === 'custom') {
       dialogs.prompt('Enter your UserAgent!', '', (newUA) => {
         if (newUA !== null && newUA.replace(/^\s/, '') !== '') {
           emitter.emit('updateUAs', state.settings.uas.concat(newUA))
@@ -27,9 +27,9 @@ module.exports = (state, emitter) => {
           emitter.emit('saveUrls', null)
           emitter.emit('render')
         }
-      });
+      })
     } else {
-      emitter.emit('updateUA', data)
+      emitter.emit('updateUA', value)
       emitter.emit('saveUrls', null)
       emitter.emit('render')
     }
