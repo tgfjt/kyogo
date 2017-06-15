@@ -20,7 +20,7 @@ module.exports = (state, emitter) => {
   })
   emitter.on('editUA', (value) => {
     if (value === 'custom') {
-      dialogs.prompt('Enter your UserAgent!', '', (newUA) => {
+      dialogs.prompt('Enter your UserAgent.', '', (newUA) => {
         if (newUA !== null && newUA.replace(/^\s/, '') !== '') {
           emitter.emit('updateUAs', state.settings.uas.concat(newUA))
           emitter.emit('updateUA', newUA)
@@ -35,14 +35,14 @@ module.exports = (state, emitter) => {
     }
   })
   emitter.on('addInput', () => {
-    emitter.emit('updateInputs', state.settings.inputs.concat({ url: '', error: ''}))
+    emitter.emit('updateInputs', state.settings.inputs.concat({ url: '', error: '' }))
     emitter.emit('render')
   })
   emitter.on('saveUrls', () => {
     if (state.settings.inputs.some(input => !input.url || !isUrl(input.url))) {
       const inputs = state.settings.inputs.map((input) => {
         if (!input.url) {
-          input.error = 'Oh it\'s empty...'
+          input.error = 'Oh, It\'s empty...'
         } else if (!isUrl(input.url)) {
           input.error = 'Uh-oh it\'s invalid URL.'
         }

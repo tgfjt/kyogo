@@ -5,6 +5,11 @@
 </div>
 <br>
 <div align="center">
+  <!-- Stability -->
+  <a href="https://nodejs.org/api/documentation.html#documentation_stability_index">
+    <img src="https://img.shields.io/badge/stability-experimental-orange.svg?style=flat-square"
+      alt="Stability" />
+  </a>
   <!-- Build Status -->
   <a href="https://travis-ci.org/tgfjt/kyogo">
     <img src="https://img.shields.io/travis/tgfjt/kyogo/master.svg?style=flat-square"
@@ -14,11 +19,6 @@
   <a href="https://standardjs.com">
     <img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square"
       alt="Standard" />
-  </a>
-  <!-- Stability -->
-  <a href="https://nodejs.org/api/documentation.html#documentation_stability_index">
-    <img src="https://img.shields.io/badge/stability-experimental-orange.svg?style=flat-square"
-      alt="Stability" />
   </a>
 </div>
 
