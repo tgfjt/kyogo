@@ -1,8 +1,26 @@
-# Kyogo [![stability][0]][1]
+# Kyogo
 
-[![build status][2]][3]
-
-![競合](./kyogo.png)
+<div align="center">
+  <img src="./kyogo.png" alt="競合 Logo" title="Kyogo" />
+</div>
+<br>
+<div align="center">
+  <!-- Build Status -->
+  <a href="https://travis-ci.org/tgfjt/kyogo">
+    <img src="https://img.shields.io/travis/tgfjt/kyogo/master.svg?style=flat-square"
+      alt="Build Status" />
+  </a>
+  <!-- Standard -->
+  <a href="https://standardjs.com">
+    <img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square"
+      alt="Standard" />
+  </a>
+  <!-- Stability -->
+  <a href="https://nodejs.org/api/documentation.html#documentation_stability_index">
+    <img src="https://img.shields.io/badge/stability-experimental-orange.svg?style=flat-square"
+      alt="Stability" />
+  </a>
+</div>
 
 ## How to develop
 
@@ -31,8 +49,3 @@ $ npm run build
 ## License
 
 MIT
-
-[0]: https://img.shields.io/badge/stability-experimental-orange.svg?style=flat-square
-[1]: https://nodejs.org/api/documentation.html#documentation_stability_index
-[2]: https://img.shields.io/travis/tgfjt/kyogo/master.svg?style=flat-square
-[3]: https://travis-ci.org/tgfjt/kyogo
