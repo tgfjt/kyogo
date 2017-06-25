@@ -3,9 +3,8 @@
 const path = require('path')
 const url = require('url')
 
-const electron = require('electron')
-
-const app = electron.app
+const { app } = require('electron')
+const window = require('electron-window')
 
 // adds debug features like hotkeys for triggering dev tools and reload
 require('electron-debug')()
@@ -20,10 +19,13 @@ function onClosed () {
 }
 
 function createMainWindow () {
-  const win = new electron.BrowserWindow({
-    width: 1280,
+  const win = window.createWindow({
+    width: 1200,
     height: 800,
-    frame: false
+    titleBarStyle: 'hidden-inset',
+    minWidth: 640,
+    minHeight: 395,
+    backgroundColor: '#30343d'
   })
 
   win.loadURL(url.format({

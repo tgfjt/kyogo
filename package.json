@@ -20,7 +20,8 @@
     "choo-expose": "^1.0.1",
     "choo-log": "^6.1.2",
     "dialogs": "^1.1.19",
-    "electron-debug": "^1.1.0"
+    "electron-debug": "^1.1.0",
+    "electron-window": "^0.8.1"
   },
   "devDependencies": {
     "browserify": "^14.4.0",

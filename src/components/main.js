@@ -7,7 +7,7 @@ module.exports = (state, emit) => {
   const main = state.screen.isHome ? home : settings
 
   return html`
-    <main class="window-content">
+    <main class="content">
       <div class="pane">
         ${main(state, emit)}
       </div>
