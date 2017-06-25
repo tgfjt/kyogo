@@ -22,7 +22,7 @@ function createMainWindow () {
   const win = window.createWindow({
     width: 1200,
     height: 800,
-    titleBarStyle: 'hidden-inset',
+    titleBarStyle: 'hiddenInset',
     minWidth: 640,
     minHeight: 395,
     backgroundColor: '#30343d'
